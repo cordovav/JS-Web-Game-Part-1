@@ -16,6 +16,20 @@ newImage("assets/crate.png", '150px', '200px')
 newImage("assets/well.png", '500px', '420px')
 
 
+function newItems(url,left,bottom){
+    let newItem = document.createElement("img");    
+    newItem.src = url;
+    newItem.style.position = 'fixed' ;
+    newItem.style.left = left ;
+    newItem.style.bottom = bottom ;
+    document.body.append(newItem);
+    return newItem
+}
+
+newItems("assets/sword.png",'500px','405px')
+
+/*
+
 let sword = document.createElement("img")
     sword.src="assets/sword.png";
     sword.position = 'fixed';
@@ -23,12 +37,13 @@ let sword = document.createElement("img")
     sword.bottom = "405px";
     document.body.append(sword);
 
-    sword.addEventListener('click',function(){
+    sword.addEventListener('click',
+    function newItem(url, left, bottom){
+        let item = 
         sword.remove()
     })
 
-
+*/
     
 
 
-    
