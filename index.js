@@ -17,33 +17,44 @@ newImage("assets/well.png", '500px', '420px')
 
 
 function newItems(url,left,bottom){
-    let newItem = document.createElement("img");    
-    newItem.src = url;
-    newItem.style.position = 'fixed' ;
-    newItem.style.left = left ;
-    newItem.style.bottom = bottom ;
-    document.body.append(newItem);
-    return newItem
+    let newTool = newImage(url, left, bottom);
+    document.body.append(newTool);
+
+    newTool.addEventListener('click', () => {
+        newTool.remove()
+    })
+    return newTool
 }
 
+    
+
+/*
+newItem.addEventListener('click', function(){
+    newitem.remove()
+})
+*/
 newItems("assets/sword.png",'500px','405px')
+newItems("assets/sheild.png",'165px','185px')
+newItems("assets/staff.png",'600px','100px')
 
 /*
 
-let sword = document.createElement("img")
+document.createElement("img");    
+    newTool.src = url;
+    newItem.style.position = 'fixed' ;
+    newTool.style.left = left ;
+    newTool.style.bottom = bottom ;
+newItem.addEventListener('click',
+    function newItem(url, left, bottom){
+        let newItem = 
+        newItem.remove()
+
+
+
+
+/*let sword = document.createElement("img")
     sword.src="assets/sword.png";
     sword.position = 'fixed';
     sword.left = "500px";
     sword.bottom = "405px";
-    document.body.append(sword);
-
-    sword.addEventListener('click',
-    function newItem(url, left, bottom){
-        let item = 
-        sword.remove()
-    })
-
-*/
-    
-
-
+    document.body.append(sword);*/
