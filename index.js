@@ -20,7 +20,7 @@ function newItems(url,left,bottom){
     let newTool = newImage(url, left, bottom);
     document.body.append(newTool);
 
-    newTool.addEventListener('click', () => {
+    newTool.addEventListener('dblclick', () => {
         newTool.remove()
     })
     return newTool
@@ -28,17 +28,19 @@ function newItems(url,left,bottom){
 
     
 
-/*
-newItem.addEventListener('click', function(){
-    newitem.remove()
-})
-*/
 newItems("assets/sword.png",'500px','405px')
 newItems("assets/sheild.png",'165px','185px')
 newItems("assets/staff.png",'600px','100px')
 
-/*
 
+
+
+
+
+/*
+newItem.addEventListener('click', function(){
+    newitem.remove()
+})
 document.createElement("img");    
     newTool.src = url;
     newItem.style.position = 'fixed' ;
